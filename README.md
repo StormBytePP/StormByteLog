@@ -8,6 +8,7 @@ StormByte is a comprehensive, cross-platform C++ library aimed at easing system 
 - **Configuration Management**: Provides an intuitive API for reading and writing configuration files.
 - **Logging**: Supports various logging levels and outputs, including file-based logging.
 - **Database Handling**: Includes SQLite support for embedded database management while hiding SQLite3 internals conveniently.
+- **Multimedia**: Includes a set of classes to work with multimedia files
 
 ## Table of Contents
 
@@ -18,6 +19,7 @@ StormByte is a comprehensive, cross-platform C++ library aimed at easing system 
 	- [Config](https://dev.stormbyte.org/StormByte-Config)
 	- [Database](https://dev.stormbyte.org/StormByte-Database)
 	- **Logger**
+	- [Multimedia](https://dev.stormbyte.org/StormByte-Multimedia)
 	- [System](https://dev.stormbyte.org/StormByte-System)
 - [Contributing](#Contributing)
 - [License](#License)
@@ -67,7 +69,7 @@ using namespace StormByte::Logger;
 // Example usage
 int main() {
 	// Simple logger outputing only errors to stdout
-	Logger logger(std::cout, StormByte::Log::Level::Error);
+	Logger logger(std::cout, Level::Error);
 	logger << Level::Info << "This is an info message"; // Will not be displayed
 	logger << Level::Error << "This is an error message"; // Will be displayed
 	return 0;
