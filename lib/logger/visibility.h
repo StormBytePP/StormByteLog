@@ -3,7 +3,7 @@
 #include <definitions.h>
 
 #ifdef WINDOWS
-	#ifdef StormByteLogger_EXPORTS
+	#ifdef StormByte_Logger_EXPORTS
 		#define STORMBYTE_LOGGER_PUBLIC	__declspec(dllexport)
   	#else
       	#define STORMBYTE_LOGGER_PUBLIC	__declspec(dllimport)
@@ -11,5 +11,5 @@
   	#define STORMBYTE_LOGGER_PRIVATE
 #else
     #define STORMBYTE_LOGGER_PUBLIC		__attribute__ ((visibility ("default")))
-    #define STORMBYTE_LOGGER_PRIVATE		__attribute__ ((visibility ("hidden")))
+    #define STORMBYTE_LOGGER_PRIVATE	__attribute__ ((visibility ("hidden")))
 #endif
